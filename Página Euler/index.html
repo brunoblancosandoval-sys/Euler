@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academia de Matemáticas Avanzadas Euler</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+ 
+    
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body data-root="">
+
+    <header><div class="contenedor">
+        
+            <div>
+                <a href="index.html">
+                    <img class="logo"
+         src="images/logo-euler.png"
+         alt="Logo de la Academia de Matemáticas Avanzadas Euler">
+                </a>
+            </div>
+
+            <!-- BUSCADOR -->
+                <div class="buscador">
+
+    <div class="buscador-campo">
+
+        <input
+            type="search"
+            id="campo-busqueda"
+            placeholder="Buscar..."
+            autocomplete="off"
+            aria-label="Buscar en Academia Euler"
+        >
+
+        <button
+            type="button"
+            id="boton-busqueda"
+            aria-label="Buscar"
+        >
+            <i class="bi bi-search"></i>
+        </button>
+
+    </div>
+
+    <div
+        id="resultados-busqueda"
+        class="resultados-busqueda">
+    </div>
+
+                </div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes somos.html">¿Quiénes somos?</a></li>
+                    <li class="menu-desplegable">
+                <a href="index.html#areas">Materias</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="materias/basicas.html">
+                            Matemáticas básicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/olimpicas.html">
+                            Matemáticas olímpicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/avanzadas.html">
+                            Matemáticas avanzadas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/admision.html">
+                            Preparación para exámenes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/estrategia.html">
+                            Pensamiento estratégico
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li class="menu-desplegable">
+                <a href="index.html#programas">Programas</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="clases.html">
+                            Clases
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cursos.html">
+                            Cursos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="eventos.html">
+                            Eventos
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        
+    </div></header>
+
+
+    <main>
+
+        <section id="inicio" class="hero">
+            <div class="contenedor hero-contenido">
+       
+            <h1>
+                Aprende a razonar y resolver
+            </h1>
+            <h1>
+                Entiende de verdad
+            </h1>
+
+            <p class="hero-descripcion">
+                    Matemáticas y pensamiento lógico de todo tipo y nivel, desde primaria hasta universidad, con un enfoque basado en el razonamiento, la creatividad y la comprensión profunda.
+            </p>
+
+            <div class="hero-botones">
+                <p>
+                <a href="#areas " class="boton boton-secundario"> Conoce lo que hacemos</a>
+                </p>
+                <p>
+                <a href="#programas" class="boton boton-secundario"> Conoce nuestros programas y actividades</a>
+                </p>
+                <p>
+                <a href="#contacto" class="boton boton-principal">Pide informes</a>
+                </p>
+                
+                
+            </div>
+
+            </div>
+
+        </section>
+
+
+    <!-- POR QUÉ EULER -->
+
+    <section id="por-que-euler"><div class="contenedor">
+        
+            <h2>¿Por qué Euler?</h2>
+            <p>
+                Aprende con matemáticos profesionales, profesores con años
+                de experiencia y entrenadores de las Olimpiadas de Matemáticas
+                en Morelos.
+            </p>
+
+            <div class="tarjetas">
+
+            <article class="tarjeta">
+                <div class="icono-tarjeta icono-rojo">
+                    <i class="bi bi-award"></i>
+                </div>
+
+                <h3>Experiencia olímpica</h3>
+                <p>
+                    Años formando medallistas nacionales e internacionales en diversas olimpiadas de matemáticas.
+                    Varios de nuestros profesores son también medallistas olímpicos.
+                </p>
+            </article>
+            <article class="tarjeta">
+                <div class="icono-tarjeta icono-turquesa">
+                    <span>∈</span>
+                </div>
+
+                <h3>Formación matemática</h3>
+                <p>
+                    Nuestros profesores cuentan con amplia formación en matemáticas de olimpiada o matemáticas profesionales,
+                     y con una comprensión profunda de los temas que enseñan.
+                </p>
+            </article>
+            <article class="tarjeta">
+                <div class="icono-tarjeta icono-azul">
+                    <i class="bi bi-easel"></i>
+                </div>
+
+                <h3>Experiencia docente</h3>
+                
+                <p>
+                    Combinamos conocimiento matemático con experiencia
+                    pedagógica y pasión por enseñar, desde los más pequeños hasta los más grandes,
+                     desde las bases hasta lo más avanzado.
+                </p>
+            </article>
+            </div>
+             <div class="enlace-equipo-contenedor">
+
+    <a href="quienes somos.html" class="enlace-equipo">
+        Conoce al equipo
+        <i class="bi bi-arrow-right"></i>
+    </a>
+
+</div>
+
+            </a>
+
+    </div></section>
+
+    <!-- ÁREAS -->
+<section id="areas"><div class="contenedor">
+    
+    
+        <h2>¿Qué puedes aprender en Euler?</h2>
+    
+        <p>
+            Desde matemáticas escolares hasta temas universitarios avanzados,
+            olimpiadas y pensamiento estratégico.
+        </p>
+    
+        <div class="tarjetas-materias">
+
+        <article class="tarjeta-materia tarjeta-basicas">
+            <h3>Matemáticas básicas</h3>
+            <p>
+                Matemáticas escolares explicadas desde la comprensión,
+                el razonamiento y los fundamentos.
+            </p>
+            <a href="materias/basicas.html">Conoce más</a>
+        </article>
+    
+        <article class="tarjeta-materia tarjeta-olimpicas">
+            <h3>Matemáticas olímpicas</h3>
+            <p>
+                Resolución de problemas, creatividad matemática y preparación
+                para concursos.
+            </p>
+            <a href="materias/olimpicas.html">Conoce más</a>
+        </article>
+    
+        <article class="tarjeta-materia tarjeta-avanzadas">
+            <h3>Matemáticas avanzadas</h3>
+            <p>
+                Lógica, conjuntos, álgebra, cálculo, topología y otras áreas
+                desde un punto de vista matemático profundo.
+            </p>
+            <a href="materias/avanzadas.html">Conoce más</a>
+        </article>
+    
+        <article class="tarjeta-materia tarjeta-admision">
+            <h3>Preparación para exámenes de admisión</h3>
+            <p>
+                Preparación para UNAM, UAEM, PAA, Ceneval y otros exámenes,
+                combinando conocimiento matemático y estrategia.
+            </p>
+            <a href="materias/admision.html">Conoce más</a>
+        </article>
+    
+        <article class="tarjeta-materia tarjeta-estrategia">
+            <h3>Pensamiento estratégico</h3>
+            <p>
+                Juegos, problemas y actividades para aprender a desarrollar
+                estrategias de manera consciente.
+            </p>
+            <a href="materias/estrategia.html">Conoce más</a>
+        </article>
+    
+        </div>
+    
+</div></section>
+
+    <!-- PROGRAMAS -->
+
+    <section id="programas">
+        <div class="contenedor">
+        
+            <h2>Formas de aprender en Euler</h2>
+            <p>
+                Distintas formas de acercarte a las matemáticas según tus
+                objetivos y el tiempo que quieras dedicar.
+            </p>
+
+            <div class="tarjetas-programas">
+
+            <article class="tarjeta-programa">
+                <div class="icono-programa icono-azul">
+                    <i class="bi bi-calendar-week"></i>
+                </div>
+
+                <h3>Clases presenciales semanales</h3>
+                <p>
+                    Clases presenciales en grupos pequeños durante todo el año,
+                    de uno a cuatro días por semana.
+                </p>
+                <a href="clases.html" class="boton boton-secundario">
+                    Conoce las clases semanales</a>
+            </article>
+                    <article class="tarjeta-programa">
+                     <div class="icono-programa icono-turquesa">
+                    <i class="bi bi-person-gear"></i>
+                </div>   
+                <h3>Acompañamientos personalizados</h3>
+            <p>
+            Clases particulares, de manera presencial en nuestra sede, a domicilio, o en línea.
+             </p>
+             <a href="clases.html#acompañamientos" class="boton boton-secundario">
+                Conoce los acompañamientos</a>
+             </article>
+            
+            <article class="tarjeta-programa">
+
+                <div class="icono-programa icono-rojo">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+
+                <h3>Cursos especiales</h3>
+                <p>
+                    Cursos intensivos y programas de duración limitada,
+                    incluyendo nuestros cursos de verano.
+                </p>
+                <a href="cursos.html" class="boton boton-secundario">
+                    Conoce los cursos disponibles</a>
+            </article>
+            <article class="tarjeta-programa">
+
+                <div class="icono-programa icono-azul">
+                    <i class="bi bi-people"></i>
+                </div>
+
+                <h3>Talleres y eventos</h3>
+                <p>
+                    Talleres, pláticas, actividades especiales
+                    y eventos sociales.
+                </p>
+                <a href="eventos.html" class="boton boton-secundario">
+                    Conoce nuestros eventos</a>
+            </article>
+        </div>
+        </div>
+    </section>
+
+    <!-- FILOSOFÍA -->
+
+    <section id="filosofia">
+        <div class="contenedor filosofia-grid">
+            <div class="filosofia-intro">
+
+            <p class="seccion-etiqueta">
+                Cómo enseñamos
+            </p>
+        
+            <h2>Nuestra filosofía</h2>
+            <p class="filosofia-descripcion">
+                En Euler creemos que aprender matemáticas no consiste en
+                memorizar procedimientos, sino en comprender las ideas,
+                desarrollar el razonamiento lógico y aprender a crear
+                estrategias propias.
+            </p>
+            </div>
+
+            <div class="principios-filosofia">
+            <article class="principio">
+         
+                <div>
+                    <h3>Comprender</h3>
+                <p>
+                    Entender por qué funcionan las ideas y los procedimientos.
+                </p>
+                </div>
+                
+            </article>
+            
+            <article class="principio">
+
+                <div>
+                    <h3>Razonar</h3>
+
+                    <p>
+                        Analizar problemas, establecer relaciones,
+                        construir argumentos y justificar conclusiones.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="principio">
+
+                <div>
+                    <h3>Crear</h3>
+
+                    <p>
+                        Desarrollar estrategias propias y explorar caminos
+                        distintos en lugar de limitarse a repetir algoritmos.
+                    </p>
+                </div>
+
+            </article>
+            </div>
+            </div>
+</section>
+
+    <!-- OLIMPIADAS -->
+
+    <section id="olimpiadas">
+    <div class="contenedor">
+
+        <p class="seccion-etiqueta seccion-etiqueta-clara">
+    Experiencia olímpica
+</p>
+
+        <h2>Olimpiadas de Matemáticas</h2>
+
+        <p>
+            Los profesores de Euler dirigimos la formación
+            y entrenamiento de los participantes de las olimpiadas de Matemáticas
+            del estado de Morelos, que obtienen constantemente
+            numerosas medallas y reconocimientos nacionales e internacionales.
+        </p>
+
+        <div class="datos-olimpiadas">
+
+    <div class="dato-olimpiada">
+        <strong>+15</strong>
+        <span>Años de experiencia en olimpiadas</span>
+    </div>
+
+    <div class="dato-olimpiada">
+        <strong>+200</strong>
+        <span>Medallas nacionales desde 2020</span>
+    </div>
+
+    <div class="dato-olimpiada">
+        <strong>45</strong>
+        <span>Medallas y reconocimientos internacionales desde 2020</span>
+    </div>
+
+    <div class="dato-olimpiada dato-logro">
+    <strong>Oro</strong>
+    <span>
+        Medalla de oro y mejor participación
+        en la OMCC 2026
+    </span>
+</div>
+
+        </div>
+        
+
+        <div class="enlaces-olimpiadas">
+
+            <p>
+            Si quieres conocer más de las olimpiadas de matemáticas en Morelos o en México,
+            incluyendo información y amplio material gratuito, consulta las siguientes páginas:
+             </p>
+
+            <a href="https://www.olimpiadasmatematicasmorelos.mx/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="boton-olimpiada">
+                Olimpiadas de Matemáticas de Morelos
+            </a>
+
+            <a href="https://www.ommenlinea.org/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="boton-olimpiada">
+                Olimpiada Mexicana de Matemáticas
+            </a>
+
+        </div>
+
+    </div>
+    </section>
+
+    <!-- PARA QUIÉN ES EULER -->
+
+    <section id="para-quien">
+
+    <div class="contenedor">
+
+        <!-- Encabezado de la sección -->
+        <div class="encabezado-seccion">
+
+            <p class="seccion-etiqueta">
+                Diferentes objetivos, una misma forma de aprender
+            </p>
+
+            <h2>¿Para quién es Euler?</h2>
+
+            <p>
+                En Euler trabajamos con estudiantes que llegan con
+                distintos niveles, intereses y objetivos matemáticos.
+            </p>
+
+        </div>
+
+
+        <!-- Perfiles -->
+        <div class="perfiles-euler">
+
+            <article class="perfil-euler">
+
+                <div class="icono-perfil">
+                    <i class="bi bi-lightbulb"></i>
+                </div>
+
+                <div>
+                    <h3>Para quien quiere entender mejor</h3>
+
+                    <p>
+                        Estudiantes que tienen dificultades con métodos mecánicos
+                        y quieren comprender las matemáticas desde sus fundamentos.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="perfil-euler">
+
+                <div class="icono-perfil">
+                    <i class="bi bi-graph-up-arrow"></i>
+                </div>
+
+                <div>
+                    <h3>Para quien quiere ir más lejos</h3>
+
+                    <p>
+                        Estudiantes con gusto o facilidad para las matemáticas
+                        que buscan nuevos retos.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="perfil-euler">
+
+                <div class="icono-perfil">
+                    <i class="bi bi-award"></i>
+                </div>
+
+                <div>
+                    <h3>Para competidores</h3>
+
+                    <p>
+                        Estudiantes interesados en olimpiadas y concursos
+                        matemáticos.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="perfil-euler">
+
+                <div class="icono-perfil">
+                    <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <div>
+                    <h3>Para aspirantes universitarios</h3>
+
+                    <p>
+                        Personas que preparan exámenes de admisión y quieren
+                        mejorar tanto sus conocimientos como sus estrategias
+                        de examen.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="perfil-euler">
+
+                <div class="icono-perfil">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+
+                <div>
+                    <h3>Para estudiantes avanzados</h3>
+
+                    <p>
+                        Alumnos de preparatoria, ingeniería o ciencias que quieren
+                        comprender las bases matemáticas profundas de lo que estudian.
+                    </p>
+                </div>
+
+            </article>
+
+            <article class="perfil-euler">
+
+                <div class="icono-perfil">
+                    <i class="bi bi-building"></i>
+                </div>
+
+                <div>
+                    <h3>Para instituciones educativas</h3>
+
+                    <p>
+                       Escuelas o colegios que quieran mejorar el nivel de matemáticas de sus alumnos,
+                       o tener mayor participación en las olimpiadas de matemáticas. 
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- Llamada a la acción -->
+        <div class="para-quien-cta">
+
+            <p>
+                ¿No sabes qué programa es el adecuado para ti?
+            </p>
+
+            <a href="#contacto" class="boton boton-principal">
+                Cuéntanos qué estás buscando
+            </a>
+
+        </div>
+
+    </div>
+
+    </section>
+
+    
+
+
+    <!-- CONTACTO -->
+
+<section id="contacto">
+
+    <div class="contenedor">
+
+        <div class="contacto-encabezado">
+
+            <p class="seccion-etiqueta">
+                Estamos en Cuernavaca
+            </p>
+
+            <h2>Contáctanos</h2>
+
+        </div>
+
+        <!-- REDES Y CONTACTO -->
+
+        <div class="contacto-redes">
+
+            <h3>¿Quieres pedir informes o hacer una cita?</h3>
+
+            <p>
+                Escríbenos para agendar una clase, conocer horarios, disponibilidad,
+                programas y la opción más adecuada para ti.
+            </p>
+
+            <div class="redes-sociales">
+
+    <!-- WhatsApp principal -->
+    <a class="whatsapp-principal"
+       data-red="whatsapp"
+       target="_blank"
+       rel="noopener noreferrer">
+
+        <i class="bi bi-whatsapp"></i>
+        <span>Escríbenos por WhatsApp</span>
+
+    </a>
+
+
+    <!-- Redes secundarias -->
+    <a class="social-link"
+       data-red="facebook"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Facebook">
+
+        <i class="bi bi-facebook"></i>
+
+    </a>
+
+    <a class="social-link"
+       data-red="instagram"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Instagram">
+
+        <i class="bi bi-instagram"></i>
+
+    </a>
+
+</div>
+
+        </div>
+
+        <!-- SEDES -->
+
+        <div class="sedes">
+
+            <div class="sedes-encabezado">
+
+                <h3>Nuestras sedes</h3>
+
+                <p>
+                    Clases presenciales en Cuernavaca, Morelos.
+                </p>
+
+            </div>
+
+
+            <div class="sedes-grid">
+
+                <article class="sede">
+
+                    <div class="icono-sede">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <div>
+                        <h4>Sede Chamilpa</h4>
+
+                        <p>
+                            Av. Universidad 51, col. Chamilpa,
+                            Cuernavaca, Morelos.
+                        </p>
+
+                        <a href="https://maps.app.goo.gl/vLEvbEbYsc43wZUS6"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="enlace-maps">
+
+                            Ver en Google Maps
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+                    </div>
+
+                </article>
+
+
+                <article class="sede">
+
+                    <div class="icono-sede">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <div>
+                        <h4>Sede Los Volcanes</h4>
+
+                        <p>
+                            C. Cnel. Ahumada 50, col. Los Volcanes,
+                            Cuernavaca, Morelos.
+                        </p>
+
+                        <a href="https://maps.app.goo.gl/sBRq6tqLc8bDBSTM8"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="enlace-maps">
+
+                            Ver en Google Maps
+                            <i class="bi bi-arrow-up-right"></i>
+
+                        </a>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    </main>
+
+    <footer>
+
+    <div class="contenedor footer-contenido">
+
+        <!-- IDENTIDAD -->
+        <div class="footer-identidad">
+
+            <p class="footer-nombre">
+                Academia de Matemáticas Avanzadas Euler
+            </p>
+
+            <p>
+                Cuernavaca, Morelos
+            </p>
+
+            <p class="footer-descripcion">
+                Matemáticas desde la comprensión,
+                el razonamiento y la creatividad.
+            </p>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-navegacion">
+
+            <h3>Explora Euler</h3>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="quienes somos.html">Quiénes somos</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#areas">Materias</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#programas">Programas</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <!-- REDES -->
+        <div class="footer-redes">
+
+            <h3>Síguenos</h3>
+
+            <div class="footer-iconos">
+
+                <a data-red="facebook"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a data-red="instagram"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a data-red="tiktok"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <a data-red="youtube"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="bi bi-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR -->
+    <div class="contenedor footer-inferior">
+
+        <p>
+        Academia de Matemáticas Avanzadas Euler
+        </p>
+
+    </div>
+
+    </footer>
+
+    <script src="js/euler.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
