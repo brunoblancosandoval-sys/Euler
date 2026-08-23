@@ -1,0 +1,2916 @@
+
+:root {
+    /* Colores */
+    --azul-euler: #38559A;
+    --rojo-euler: #D94735;
+    --turquesa-euler: #0785A6;
+
+    --gris-euler: #8A8A8A;
+    --texto: #252525;
+    --fondo: #FFFFFF;
+    --fondo-suave: #F5F7FA;
+    --fondo-azul-suave: #dce8f7;
+
+    /* Tipografías */
+    --fuente-texto: "Inter", sans-serif;
+    --fuente-titulos: "Montserrat", sans-serif;
+
+    /* Medidas */
+    --ancho-maximo: 1200px;
+}  
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--texto);
+    background-color: var(--fondo);
+    font-family: var(--fuente-texto);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fuente-titulos);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--azul-euler);
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--azul-euler);
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+a {
+    color: var(--azul-euler);
+}
+
+.contenedor {
+    width: 90%;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 50px 0;
+}
+
+article {
+    padding: 20px 0;
+}
+
+
+
+
+header .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+
+
+header {
+    background-color: var(--fondo);
+    padding: 16px 0;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease;
+}
+
+header.oculto {
+    transform: translateY(-100%);
+}
+
+.logo {
+    width: 140px;
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--azul-euler);
+}
+
+.buscador {
+    position: relative;
+}
+
+.buscador-campo {
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #dddddd;
+    border-radius: 24px;
+
+    padding: 5px 12px;
+
+    background-color: var(--fondo);
+}
+
+.buscador input {
+    width: 150px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-family: var(--fuente-texto);
+    font-size: 0.9rem;
+}
+
+.buscador button {
+    border: none;
+    background: transparent;
+
+    color: var(--azul-euler);
+    font-size: 1.1rem;
+
+    cursor: pointer;
+}
+
+.resultados-busqueda {
+    display: none;
+
+    position: absolute;
+
+    top: calc(100% + 8px);
+    right: 0;
+
+    width: 320px;
+
+    background-color: var(--fondo);
+
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+
+    z-index: 2000;
+}
+
+.resultados-busqueda.visible {
+    display: block;
+}
+
+.resultado-busqueda {
+    display: block;
+
+    padding: 14px 16px;
+
+    color: var(--texto);
+    text-decoration: none;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.resultado-busqueda strong {
+    display: block;
+
+    font-family: var(--fuente-titulos);
+    color: var(--azul-euler);
+
+    margin-bottom: 3px;
+}
+
+.resultado-busqueda span {
+    display: block;
+
+    font-size: 0.85rem;
+    color: var(--gris-euler);
+}
+
+.resultado-busqueda:hover {
+    background-color: var(--fondo-suave);
+}
+
+
+
+.menu-desplegable {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 260px;
+
+    background-color: var(--fondo);
+
+    padding: 12px 0;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.menu-desplegable:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px 18px;
+}
+
+.submenu li a:hover {
+    background-color: var(--fondo-suave);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--fondo);
+}
+
+.hero-contenido {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.hero-etiqueta {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    color: var(--turquesa-euler);
+    margin-bottom: 16px;
+}
+
+.hero h1 {
+    max-width: 800px;
+    margin-bottom: 24px;
+}
+
+.hero-descripcion {
+    max-width: 700px;
+    font-size: 1.15rem;
+    margin-bottom: 32px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.boton-principal {
+    background-color: var(--rojo-euler);
+    color: white;
+}
+
+.boton-principal:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    border: 2px solid var(--azul-euler);
+    color: var(--azul-euler);
+    background-color: transparent;
+}
+
+.boton-secundario:hover {
+    background-color: var(--azul-euler);
+    color: white;
+}
+
+
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tarjeta {
+    background-color: var(--fondo);
+    padding: 32px;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+#por-que-euler {
+    background-color: var(--fondo-suave);
+}
+
+.tarjeta h3 {
+    color: var(--azul-euler);
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    margin-bottom: 0;
+}
+
+.tarjeta {
+    background-color: var(--fondo);
+    padding: 32px;
+    border-radius: 16px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+#por-que-euler > .contenedor > p {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.icono-tarjeta {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    margin-bottom: 24px;
+
+    font-size: 1.6rem;
+}
+
+.icono-rojo {
+    color: var(--rojo-euler);
+    background-color: rgba(217, 71, 53, 0.12);
+}
+
+.icono-turquesa {
+    color: var(--turquesa-euler);
+    background-color: rgba(7, 133, 166, 0.12);
+}
+
+.icono-azul {
+    color: var(--azul-euler);
+    background-color: rgba(56, 85, 154, 0.12);
+}
+
+.enlace-equipo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-top: 32px;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    color: var(--azul-euler);
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.enlace-equipo:hover {
+    color: var(--rojo-euler);
+    gap: 12px;
+}
+
+.enlace-equipo-contenedor {
+    margin-top: 36px;
+}
+
+.enlace-equipo-contenedor p {
+    margin-bottom: 8px;
+    color: var(--texto);
+}
+
+.enlace-equipo {
+    margin-top: 0;
+}
+
+
+
+
+#areas {
+    background-color: var(--fondo-azul-suave);
+}
+
+#areas > .contenedor > p {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.tarjetas-materias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tarjeta-materia {
+    background-color: var(--fondo);
+    color: var(--texto);
+
+    padding: 28px;
+    border-radius: 16px;
+
+    border: 1px solid #e6e8ee;
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.tarjeta-materia h3 {
+    margin-bottom: 12px;
+    color: var(--texto);
+}
+
+.tarjeta-materia p {
+    margin-bottom: 24px;
+    color: var(--texto);
+}
+
+.tarjeta-materia a {
+    margin-top: auto;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    color: var(--azul-euler);
+    text-decoration: none;
+}
+
+.tarjeta-materia:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+
+    border-color: var(--azul-euler);
+}
+
+.tarjeta-materia a:hover {
+    color: var(--rojo-euler);
+}
+
+.tarjeta-basicas {
+    border-top: 5px solid var(--azul-euler);
+}
+
+.tarjeta-olimpicas {
+    border-top: 5px solid var(--rojo-euler);
+}
+
+.tarjeta-avanzadas {
+    border-top: 5px solid var(--turquesa-euler);
+}
+
+.tarjeta-admision {
+    border-top: 5px solid var(--gris-euler);
+}
+
+.tarjeta-estrategia {
+    border-top: 5px solid var(--azul-euler);
+}
+
+
+#programas {
+    background-color: var(--fondo-suave);
+}
+
+#programas > .contenedor > p {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.tarjetas-programas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.tarjeta-programa {
+    background-color: var(--fondo);
+
+    padding: 32px;
+    border-radius: 18px;
+
+    border: 1px solid #e6e8ee;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tarjeta-programa:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.tarjeta-programa h3 {
+    margin-bottom: 12px;
+    color: var(--texto);
+}
+
+.tarjeta-programa p {
+    margin-bottom: 28px;
+}
+
+.tarjeta-programa .boton {
+    margin-top: auto;
+}
+
+.icono-programa {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    margin-bottom: 24px;
+
+    font-size: 1.7rem;
+}
+
+.icono-azul {
+    color: var(--azul-euler);
+    background-color: rgba(56, 85, 154, 0.12);
+}
+
+.icono-rojo {
+    color: var(--rojo-euler);
+    background-color: rgba(217, 71, 53, 0.12);
+}
+
+.icono-turquesa {
+    color: var(--turquesa-euler);
+    background-color: rgba(7, 133, 166, 0.12);
+}
+
+#filosofia {
+    background-color: var(--fondo);
+}
+
+.filosofia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.seccion-etiqueta {
+    margin-bottom: 12px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    color: var(--turquesa-euler);
+
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.filosofia-descripcion {
+    max-width: 520px;
+    font-size: 1.1rem;
+}
+
+.principios-filosofia {
+    display: flex;
+    flex-direction: column;
+}
+
+.principio {
+    padding: 26px 0 26px 24px;
+    border-bottom: 1px solid #e6e8ee;
+    position: relative;
+}
+
+.principio::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 30px;
+
+    width: 4px;
+    height: 42px;
+
+    border-radius: 4px;
+}
+
+.principio:nth-child(1)::before {
+    background-color: var(--azul-euler);
+}
+
+.principio:nth-child(2)::before {
+    background-color: var(--rojo-euler);
+}
+
+.principio:nth-child(3)::before {
+    background-color: var(--turquesa-euler);
+}
+
+.principio h3 {
+    margin-bottom: 8px;
+    color: var(--texto);
+}
+
+.principio p {
+    margin: 0;
+}
+
+
+
+#olimpiadas {
+    background-color: var(--azul-euler);
+    color: white;
+}
+
+#olimpiadas h2 {
+    color: white;
+}
+
+#olimpiadas .contenedor > p {
+    max-width: 850px;
+}
+
+.enlaces-olimpiadas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+
+    margin-top: 32px;
+}
+
+.boton-olimpiada {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    background-color: white;
+    color: var(--azul-euler);
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+.boton-olimpiada:hover {
+    transform: translateY(-2px);
+
+    background-color: var(--rojo-euler);
+    color: white;
+}
+
+#olimpiadas h2 {
+    color: white;
+    font-size: 2.6rem;
+    margin-bottom: 24px;
+}
+
+.seccion-etiqueta-clara {
+    color: #c9d5f2;
+}
+
+.datos-olimpiadas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 45px 0;
+}
+
+.dato-olimpiada {
+    padding: 10px 30px;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.dato-olimpiada:first-child {
+    padding-left: 0;
+}
+
+.dato-olimpiada:last-child {
+    border-right: none;
+}
+
+.dato-olimpiada strong {
+    display: block;
+
+    font-family: var(--fuente-titulos);
+    font-size: 3rem;
+    line-height: 1;
+
+    color: white;
+
+    margin-bottom: 12px;
+}
+
+.dato-olimpiada span {
+    display: block;
+
+    max-width: 220px;
+
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dato-logro strong {
+    color: #f2c94c;
+}
+
+
+
+
+
+
+#para-quien {
+    background-color: var(--fondo-suave);
+}
+
+.encabezado-seccion {
+    max-width: 760px;
+    margin-bottom: 48px;
+}
+
+.perfiles-euler {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.perfil-euler {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+
+    padding: 28px;
+
+    background-color: var(--fondo);
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.perfil-euler:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.icono-perfil {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    font-size: 1.6rem;
+}
+
+.perfil-euler:nth-child(1) .icono-perfil {
+    color: var(--azul-euler);
+    background-color: rgba(56, 85, 154, 0.12);
+}
+
+.perfil-euler:nth-child(2) .icono-perfil {
+    color: var(--turquesa-euler);
+    background-color: rgba(7, 133, 166, 0.12);
+}
+
+.perfil-euler:nth-child(3) .icono-perfil {
+    color: var(--rojo-euler);
+    background-color: rgba(217, 71, 53, 0.12);
+}
+
+.perfil-euler:nth-child(4) .icono-perfil {
+    color: var(--azul-euler);
+    background-color: rgba(56, 85, 154, 0.12);
+}
+
+.perfil-euler:nth-child(5) .icono-perfil {
+    color: var(--turquesa-euler);
+    background-color: rgba(7, 133, 166, 0.12);
+}
+
+.perfil-euler:nth-child(6) .icono-perfil {
+    color: var(--rojo-euler);
+    background-color: rgba(217, 71, 53, 0.12);
+}
+
+.perfil-euler::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+}
+
+.perfil-euler:nth-child(3n + 1)::before {
+    background-color: var(--azul-euler);
+}
+
+.perfil-euler:nth-child(3n + 2)::before {
+    background-color: var(--turquesa-euler);
+}
+
+.perfil-euler:nth-child(3n)::before {
+    background-color: var(--rojo-euler);
+}
+
+.perfil-euler h3 {
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+.perfil-euler p {
+    margin: 0;
+    color: #555555;
+}
+
+.para-quien-cta {
+    margin-top: 48px;
+    padding: 28px 32px;
+
+    background-color: var(--azul-euler);
+    color: white;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.para-quien-cta p {
+    margin: 0;
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#contacto {
+    background-color: var(--fondo);
+}
+
+.contacto-encabezado {
+    max-width: 700px;
+    margin-bottom: 32px;
+}
+
+.contacto-encabezado > p:last-child {
+    font-size: 1.05rem;
+}
+
+.sedes {
+    padding-top: 40px;
+    border-top: 1px solid #dfe2e8;
+    margin-bottom: 0;
+}
+
+.sedes-encabezado {
+    margin-bottom: 24px;
+}
+
+.sedes-encabezado h3 {
+    margin-bottom: 6px;
+}
+
+.sedes-encabezado p {
+    margin: 0;
+}
+
+.sedes-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.sede {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    gap: 18px;
+
+    padding: 28px;
+
+    background-color: var(--fondo-suave);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.icono-sede {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: rgba(217, 71, 53, 0.12);
+    color: var(--rojo-euler);
+
+    font-size: 1.4rem;
+}
+
+.sede h4 {
+    margin-bottom: 8px;
+    color: var(--texto);
+}
+
+.sede p {
+    margin-bottom: 14px;
+    color: #555555;
+}
+
+.enlace-maps {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    color: var(--azul-euler);
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.enlace-maps:hover {
+    color: var(--rojo-euler);
+    gap: 9px;
+}
+
+.contacto-redes {
+    margin-bottom: 48px;
+}
+
+.contacto-redes h3 {
+    margin-bottom: 6px;
+}
+
+.contacto-redes > p {
+    margin-bottom: 20px;
+}
+
+.social-link {
+    width: 46px;
+    height: 46px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: var(--azul-euler);
+    color: white;
+
+    font-size: 1.25rem;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.social-link:hover {
+    background-color: var(--rojo-euler);
+    transform: translateY(-2px);
+}
+
+
+.redes-sociales {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.whatsapp-principal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    border-radius: 24px;
+
+    background-color: var(--azul-euler);
+    color: white;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.whatsapp-principal i {
+    font-size: 1.3rem;
+}
+
+.whatsapp-principal:hover {
+    background-color: var(--rojo-euler);
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: var(--azul-euler);
+    color: white;
+
+    padding-top: 40px;
+}
+
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 60px;
+
+    padding-bottom: 15px;
+}
+
+
+/* IDENTIDAD */
+
+.footer-nombre {
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+    font-size: 1.15rem;
+
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.footer-identidad p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-identidad .footer-nombre {
+    color: white;
+}
+
+.footer-descripcion {
+    max-width: 330px;
+    margin-top: 14px;
+}
+
+
+/* TÍTULOS */
+
+footer h3 {
+    color: white;
+
+    font-size: 1rem;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+
+/* NAVEGACIÓN */
+
+.footer-navegacion ul {
+    display: block;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.footer-navegacion li {
+    margin-bottom: 10px;
+}
+
+.footer-navegacion a {
+    color: rgba(255, 255, 255, 0.8);
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-navegacion a:hover {
+    color: white;
+}
+
+
+/* REDES */
+
+.footer-iconos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex-wrap: nowrap;
+}
+
+.footer-iconos a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+
+    font-size: 1.1rem;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-iconos a:hover {
+    background-color: var(--rojo-euler);
+    transform: translateY(-2px);
+}
+
+
+/* PARTE INFERIOR */
+
+.footer-inferior {
+    padding: 16px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-inferior p {
+    margin: 0;
+
+    font-size: 0.85rem;
+
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+#quienes-somos {
+    background-color: var(--fondo);
+}
+
+#quienes-intro .contenedor {
+    max-width: 1200px;
+}
+
+#quienes-intro .quienes-destacado {
+    max-width: 800px;
+}
+
+.quienes-intro h1 {
+    color: var(--azul-euler);
+    margin-bottom: 28px;
+}
+
+.quienes-destacado {
+    font-size: 1.3rem;
+    line-height: 1.7;
+
+    max-width: 800px;
+
+    color: var(--texto);
+}
+
+.equipo-seccion {
+    padding: 64px 0;
+    border-top: 1px solid #e6e8ee;
+}
+
+.equipo-encabezado {
+    max-width: 800px;
+    margin-bottom: 36px;
+}
+
+.equipo-encabezado h2 {
+    margin-bottom: 16px;
+}
+
+.profesores-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.perfil-profesor {
+    padding: 32px;
+
+    background-color: var(--fondo-suave);
+
+    border-radius: 16px;
+    border-top: 5px solid var(--azul-euler);
+}
+
+.perfil-profesor h3 {
+    margin-bottom: 16px;
+    color: var(--texto);
+}
+
+.perfil-profesor p {
+    margin: 0;
+}
+
+.profesor-imagen {
+    width: 120px;
+    height: 120px;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+.profesor-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.profesor-sin-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--fondo-suave);
+    color: var(--azul-euler);
+
+    font-size: 2.5rem;
+}
+
+.asesores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.perfil-asesor {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 12px;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.perfil-asesor i {
+    font-size: 1.4rem;
+}
+
+.perfil-asesor h3 {
+    margin: 0 0 14px;
+
+    color: var(--turquesa-euler);
+
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.perfil-asesor p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    color: var(--texto);
+}
+
+.asesor-imagen {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--fondo-suave);
+    color: var(--texto);
+
+    font-size: 1.4rem;
+}
+
+.quienes-sedes {
+    padding: 64px 0 0;
+    border-top: 1px solid #e6e8ee;
+}
+
+#quienes-intro {
+    background-color: var(--fondo-suave);
+}
+
+.equipo-seccion {
+    background-color: var(--fondo);
+}
+
+.asesores-seccion {
+    background-color: var(--fondo-suave);
+}
+
+.quienes-sedes {
+    background-color: var(--fondo);
+}
+
+#quienes-intro,
+.equipo-seccion,
+.quienes-sedes {
+    padding: 72px 0;
+}
+
+
+
+
+
+#inicio-materia {
+    background-color: var(--fondo);
+}
+
+#inicio-materia .contenedor {
+    max-width: 1200px;
+}
+
+#inicio-materia h1 {
+    max-width: 800px;
+    margin-bottom: 24px;
+}
+
+.materia-intro {
+    max-width: 850px;
+
+    font-size: 1.25rem;
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.materia-intro-secundaria {
+    max-width: 800px;
+
+    font-size: 1.05rem;
+    color: #555555;
+
+    margin-bottom: 0;
+}
+
+#donde-estudiar {
+    background-color: var(--fondo-suave);
+}
+
+.materia-seccion-encabezado {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.modalidades-materia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.modalidad-materia {
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.modalidad-materia:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+}
+
+.icono-modalidad {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    font-size: 1.6rem;
+}
+
+.modalidad-materia h3 {
+    margin-bottom: 12px;
+    color: var(--texto);
+}
+
+.modalidad-materia > p {
+    margin-bottom: 20px;
+}
+
+.lista-modalidad {
+    margin: 0 0 24px;
+    padding-left: 20px;
+}
+
+.lista-modalidad li {
+    margin-bottom: 7px;
+}
+
+.lista-modalidad a {
+    color: var(--azul-euler);
+    text-decoration: none;
+}
+
+.lista-modalidad a:hover {
+    color: var(--rojo-euler);
+}
+
+.enlace-modalidad {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: auto;
+
+    color: var(--azul-euler);
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.enlace-modalidad:hover {
+    color: var(--rojo-euler);
+    gap: 10px;
+}
+
+.materia-cta {
+    margin-top: 48px;
+    padding-top: 36px;
+
+    border-top: 1px solid #dfe2e8;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.materia-cta p {
+    margin: 0;
+
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+#olimpiadas-materia {
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+#olimpiadas-materia h2 {
+    color: var(--azul-euler);
+    margin-bottom: 20px;
+}
+
+#olimpiadas-materia .contenedor > p:not(.seccion-etiqueta) {
+    max-width: 850px;
+    margin-bottom: 28px;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+#olimpiadas-materia .seccion-etiqueta {
+    color: var(--rojo-euler);
+}
+
+#olimpiadas-materia .contenedor {
+    position: relative;
+}
+
+#olimpiadas-materia .contenedor::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background-color: var(--rojo-euler);
+    border-radius: 5px;
+}
+
+.olimpiadas-destacado {
+    padding-left: 28px;
+
+    border-left: 5px solid var(--rojo-euler);
+}
+
+.boton-olimpiada {
+    display: inline-block;
+
+    padding: 12px 20px;
+
+    background-color: var(--azul-euler);
+    color: white;
+
+    border-radius: 10px;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.boton-olimpiada:hover {
+    background-color: var(--rojo-euler);
+    transform: translateY(-2px);
+}
+
+
+#inicio-estrategia {
+    background-color: var(--fondo);
+}
+
+#inicio-estrategia h1 {
+    max-width: 800px;
+    margin-bottom: 24px;
+}
+
+#inicio-estrategia .contenedor {
+    max-width: 1200px;
+}
+
+#inicio-estrategia p {
+    max-width: 850px;
+    line-height: 1.75;
+}
+
+#inicio-estrategia .contenedor > p:first-of-type {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--azul-euler);
+}
+
+.ejemplos-estrategia {
+    margin: 32px 0;
+
+    padding-left: 24px;
+
+    border-left: 4px solid var(--turquesa-euler);
+}
+
+.ejemplos-estrategia p {
+    margin-bottom: 12px;
+}
+
+#areas-estrategia {
+    background-color: var(--fondo-suave);
+}
+
+.seccion-areas {
+    background-color: var(--fondo-azul-suave);
+}
+
+.areas-intro {
+    max-width: 750px;
+    margin-bottom: 40px;
+}
+
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.area-card {
+    padding: 30px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.area-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+}
+
+.area-card h3 {
+    margin-bottom: 14px;
+
+    color: var(--texto);
+}
+
+.area-ejemplos {
+    margin: 18px 0 24px;
+    padding: 4px 0 4px 18px;
+
+    border-left: 4px solid var(--turquesa-euler);
+}
+
+.area-ejemplos p {
+    margin: 0 0 12px;
+
+    font-size: 1.05rem;
+    line-height: 1.6;
+
+    color: var(--texto);
+}
+
+.area-ejemplos p:last-child {
+    margin-bottom: 0;
+}
+
+
+.area-descripcion p {
+    margin: 0;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    color: #555555;
+}
+
+.icono-area {
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+}
+
+.icono-area span {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+#talleres {
+    background-color: var(--fondo);
+}
+
+#talleres article {
+    max-width: 800px;
+
+    padding-left: 28px;
+
+    border-left: 5px solid var(--rojo-euler);
+}
+
+#talleres h2 {
+    margin-bottom: 12px;
+}
+
+#talleres p {
+    margin-bottom: 20px;
+}
+
+#talleres a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    color: var(--azul-euler);
+    text-decoration: none;
+}
+
+#talleres a:hover {
+    color: var(--rojo-euler);
+}
+
+#resultados-admision {
+    background-color: var(--fondo);
+}
+
+.resultados-encabezado {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.resultados-encabezado h2 {
+    margin-bottom: 14px;
+}
+
+.resultados-encabezado > p:last-child {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.resultados-encabezado {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.resultados-encabezado h2 {
+    margin-bottom: 16px;
+}
+
+.resultados-encabezado > p:last-child {
+    max-width: 700px;
+}
+
+.resultado-icono {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background-color: rgba(56, 85, 154, 0.12);
+    color: var(--azul-euler);
+
+    font-size: 1.4rem;
+}
+
+.resultado-admision h3 {
+    margin-bottom: 10px;
+
+    font-size: 1.1rem;
+}
+
+.resultado-dato {
+    margin-bottom: 8px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 1.35rem;
+    font-weight: 700;
+
+    color: var(--azul-euler);
+}
+
+.resultado-admision p:last-child {
+    margin-bottom: 0;
+
+    font-size: 0.95rem;
+}
+
+.resultados-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.resultado-admision {
+    padding: 28px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-top: 5px solid var(--azul-euler);
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.resultado-admision h3 {
+    margin: 0 0 18px;
+
+    color: var(--azul-euler);
+
+    font-size: 1.25rem;
+}
+
+.resultado-nombre {
+    margin: 0 0 6px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    color: var(--texto);
+}
+
+.resultado-logro {
+    margin: 0;
+
+    font-size: 1rem;
+    color: var(--texto);
+}
+
+
+
+
+
+#inicio-clases {
+    background-color: var(--fondo);
+}
+
+#inicio-clases .contenedor {
+    max-width: 1200px;
+}
+
+.clases-intro {
+    max-width: 750px;
+
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+#como-funcionan {
+    background-color: var(--fondo-azul-suave);
+}
+
+.caracteristicas-clases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 36px;
+}
+
+.caracteristica-clase {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 20px;
+
+    background-color: var(--fondo);
+
+    border-radius: 12px;
+    border: 1px solid #e6e8ee;
+}
+
+.caracteristica-clase i {
+    color: var(--azul-euler);
+    font-size: 1.4rem;
+}
+
+.caracteristica-clase span {
+    font-weight: 500;
+}
+
+#materias-clases {
+    background-color: var(--fondo);
+}
+
+#materias-clases .tarjetas-materias {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#horarios {
+    background-color: var(--fondo-suave);
+}
+
+#horarios-volcanes,
+#horarios-chamilpa {
+    margin-top: 36px;
+}
+
+#horarios-chamilpa {
+    margin-top: 48px;
+}
+
+#horarios table {
+    width: 100%;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+#horarios th {
+    padding: 16px;
+
+    background-color: var(--azul-euler);
+    color: white;
+
+    text-align: left;
+
+    font-family: var(--fuente-titulos);
+}
+
+#horarios td {
+    padding: 16px;
+
+    border-bottom: 1px solid #e6e8ee;
+}
+
+#horarios tbody tr:last-child td {
+    border-bottom: none;
+}
+
+#horarios tbody tr:hover {
+    background-color: #fafbfc;
+}
+
+.materia-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    margin: 3px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.badge-basicas {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.badge-olimpicas {
+    background-color: rgb(255, 181, 181);
+    color: rgb(255, 34, 0);
+}
+
+.badge-admision {
+    background-color: rgb(144, 233, 238);
+    color: rgb(0, 93, 100);
+}
+
+.badge-avanzadas {
+    background-color: rgb(250, 249, 230);
+    color: rgb(126, 128, 0);
+}
+
+.badge-estrategia {
+    background-color: rgb(255, 243, 225);
+    color: rgb(139, 86, 0);
+}
+
+.materia-badge:hover {
+    opacity: 0.8;
+}
+
+#acompañamientos {
+    background-color: var(--fondo);
+}
+
+.acompanamientos-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+
+    gap: 70px;
+    align-items: start;
+}
+
+.opciones-acompanamiento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+.opciones-acompanamiento > div {
+    padding: 20px;
+
+    background-color: var(--fondo-suave);
+
+    border-radius: 12px;
+}
+
+.opciones-acompanamiento i {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--turquesa-euler);
+    font-size: 1.4rem;
+}
+
+#costos {
+    background-color: var(--fondo-azul-suave);
+}
+
+.costos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.tarjeta-costo {
+    padding: 24px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 14px;
+}
+
+.tarjeta-costo h4 {
+    margin: 0 0 16px;
+
+    font-size: 1rem;
+}
+
+.tarjeta-costo .precio {
+    margin: 0 0 2px;
+
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    color: var(--azul-euler);
+}
+
+.tarjeta-costo > span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.tarjeta-costo small {
+    display: block;
+    margin-top: 10px;
+}
+
+.titulo-costos-particulares {
+    margin-top: 52px;
+}
+
+#contacto-clases {
+    background-color: var(--fondo);
+}
+
+#contacto-clases .contenedor {
+    max-width: 800px;
+}
+
+#contacto-clases p {
+    margin-bottom: 24px;
+}
+
+.costos-particulares {
+    max-width: 700px;
+}
+
+.costo-inscripcion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    max-width: 700px;
+
+    margin: 28px 0 36px;
+    padding: 20px 24px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-left: 5px solid var(--turquesa-euler);
+
+    border-radius: 14px;
+}
+
+.icono-inscripcion {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: rgba(40, 170, 170, 0.12);
+    color: var(--turquesa-euler);
+
+    font-size: 1.3rem;
+}
+
+.inscripcion-info {
+    flex: 1;
+}
+
+.inscripcion-info h4 {
+    margin: 0 0 5px;
+}
+
+.inscripcion-info p {
+    margin: 0;
+
+    font-size: 0.95rem;
+}
+
+.inscripcion-info {
+    flex: 1;
+}
+
+.inscripcion-info h4 {
+    margin: 0 0 5px;
+}
+
+.inscripcion-info p {
+    margin: 0;
+
+    font-size: 0.95rem;
+}
+
+.titulo-mensualidades {
+    margin: 0 0 18px;
+
+    font-size: 1.1rem;
+    color: var(--texto);
+}
+
+
+
+#inicio-cursos {
+    background-color: var(--fondo);
+}
+
+.cursos-intro {
+    max-width: 800px;
+
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+#cursos-disponibles {
+    background-color: var(--fondo-suave);
+}
+
+.cursos-encabezado {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.curso-card {
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.curso-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+}
+
+.icono-curso {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 18px;
+
+    border-radius: 50%;
+
+    font-size: 1.5rem;
+}
+
+.icono-curso span {
+    font-family: var(--fuente-titulos);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.curso-meta {
+    display: inline-block;
+
+    align-self: flex-start;
+
+    margin-bottom: 12px;
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background-color: var(--fondo-suave);
+    color: var(--azul-euler);
+
+    font-family: var(--fuente-titulos);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.curso-card h3 {
+    margin-bottom: 14px;
+
+    color: var(--texto);
+}
+
+.curso-card p {
+    margin-top: 0;
+    margin-bottom: 14px;
+
+    line-height: 1.65;
+}
+
+.enlace-curso {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    margin-top: auto;
+    padding-top: 12px;
+
+    color: var(--azul-euler);
+
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.enlace-curso:hover {
+    color: var(--rojo-euler);
+    gap: 10px;
+}
+
+#inicio-eventos {
+    background-color: var(--fondo);
+}
+
+.eventos-intro {
+    max-width: 800px;
+
+    font-size: 1.2rem;
+    line-height: 1.7;
+
+    margin-bottom: 0;
+}
+
+#tipos-eventos {
+    background-color: var(--fondo-suave);
+}
+
+.eventos-encabezado {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+.eventos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.evento-card {
+    padding: 32px;
+
+    background-color: var(--fondo);
+
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.evento-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+}
+
+.icono-evento {
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 50%;
+
+    font-size: 1.6rem;
+}
+
+.evento-card h3 {
+    margin-bottom: 14px;
+    color: var(--texto);
+}
+
+.evento-card p {
+    margin: 0;
+
+    line-height: 1.65;
+}
+
+.evento-card a {
+    color: var(--azul-euler);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.evento-card a:hover {
+    color: var(--rojo-euler);
+}
+
+#calendario {
+    background-color: var(--fondo);
+}
+
+.calendario-encabezado {
+    max-width: 800px;
+    margin-bottom: 32px;
+}
+
+.calendario-contenedor {
+    overflow: hidden;
+
+    border: 1px solid #e6e8ee;
+    border-radius: 16px;
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.calendario-google {
+    display: block;
+
+    width: 100%;
+    height: 650px;
+
+    border: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+
+/* TABLETS Y PANTALLAS MEDIANAS */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 10px 0;
+    }
+
+    header .contenedor {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 16px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: 100px;
+    }
+
+
+    /* BOTÓN HAMBURGUESA */
+
+    .menu-toggle {
+        display: flex;
+
+        width: 44px;
+        height: 44px;
+
+        align-items: center;
+        justify-content: center;
+
+        justify-self: end;
+
+        border: none;
+        border-radius: 10px;
+
+        background-color: transparent;
+        color: var(--azul-euler);
+
+        font-size: 1.8rem;
+
+        cursor: pointer;
+    }
+
+
+    /* BUSCADOR */
+
+    .buscador {
+        display: none;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+    .buscador-campo {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .buscador input {
+        width: 100%;
+    }
+
+
+    /* NAVEGACIÓN */
+
+    header nav {
+        display: none;
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+    }
+
+    header nav > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        padding-top: 12px;
+    }
+
+    header nav > ul > li {
+        width: 100%;
+    }
+
+    header nav a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 0;
+
+        border-bottom: 1px solid #eeeeee;
+    }
+
+
+    /* CUANDO EL MENÚ ESTÁ ABIERTO */
+
+    header.menu-abierto nav {
+        display: block;
+    }
+
+    header.menu-abierto .buscador {
+        display: block;
+    }
+
+
+    /* SUBMENÚS */
+
+    .menu-desplegable {
+        position: static;
+    }
+
+    .submenu {
+        display: block;
+
+        position: static;
+
+        min-width: 0;
+
+        padding: 0 0 6px 18px;
+
+        box-shadow: none;
+
+        background-color: transparent;
+    }
+
+    .submenu li a {
+        padding: 9px 0;
+
+        font-size: 0.9rem;
+
+        color: var(--gris-euler);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    header.menu-abierto {
+        transform: translateY(0) !important;
+
+        max-height: 100dvh;
+        overflow-y: auto;
+    }
+
+    header nav > ul {
+        padding-bottom: 24px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .datos-olimpiadas,
+    .tarjetas,
+    .tarjetas-materias,
+    #materias-clases .tarjetas-materias,
+    .tarjetas-programas,
+    .perfiles-euler,
+    .profesores-grid,
+    .asesores-grid,
+    .sedes-grid,
+    .modalidades-materia,
+    .areas-grid,
+    .resultados-grid,
+    .cursos-grid,
+    .eventos-grid,
+    .costos-grid,
+    .caracteristicas-clases,
+    .opciones-acompanamiento {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .filosofia-grid,
+    .acompanamientos-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .contenedor {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        box-sizing: border-box;
+    }
+
+    section {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.15;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    p {
+        line-height: 1.65;
+    }
+
+    .seccion-etiqueta {
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .datos-olimpiadas,
+    .tarjetas,
+    .tarjetas-materias,
+    #materias-clases .tarjetas-materias,
+    .tarjetas-programas,
+    .perfiles-euler,
+    .profesores-grid,
+    .asesores-grid,
+    .sedes-grid,
+    .modalidades-materia,
+    .areas-grid,
+    .resultados-grid,
+    .cursos-grid,
+    .eventos-grid,
+    .costos-grid,
+    .caracteristicas-clases,
+    .opciones-acompanamiento {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .filosofia-grid,
+    .acompanamientos-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .para-quien-cta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .calendario-contenedor {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    .calendario-google {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: 430px;
+
+        border: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer-contenido {
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+.footer-identidad,
+.footer-navegacion,
+.footer-redes {
+    width: 100%;
+    min-width: 0;
+}
+
+.footer-iconos {
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .footer-iconos a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.95rem;
+    }
+
+.footer-inferior {
+    text-align: left;
+}
+
+    
+
+}
