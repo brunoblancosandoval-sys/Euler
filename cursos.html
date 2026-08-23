@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academia de Matemáticas Avanzadas Euler</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body data-root="">
+
+    <header><div class="contenedor">
+        
+            <div>
+                <a href="index.html">
+                    <img class="logo"
+         src="images/logo-euler.png"
+         alt="Logo de la Academia de Matemáticas Avanzadas Euler">
+                </a>
+            </div>
+
+            <!-- BUSCADOR -->
+                <div class="buscador">
+
+    <div class="buscador-campo">
+
+        <input
+            type="search"
+            id="campo-busqueda"
+            placeholder="Buscar..."
+            autocomplete="off"
+            aria-label="Buscar en Academia Euler"
+        >
+
+        <button
+            type="button"
+            id="boton-busqueda"
+            aria-label="Buscar"
+        >
+            <i class="bi bi-search"></i>
+        </button>
+
+    </div>
+
+    <div
+        id="resultados-busqueda"
+        class="resultados-busqueda">
+    </div>
+
+                </div>
+
+                <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+            <i class="bi bi-list"></i>
+        </button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes somos.html">¿Quiénes somos?</a></li>
+                    <li class="menu-desplegable">
+                <a href="index.html#areas">Materias</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="materias/basicas.html">
+                            Matemáticas básicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/olimpicas.html">
+                            Matemáticas olímpicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/avanzadas.html">
+                            Matemáticas avanzadas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/admision.html">
+                            Preparación para exámenes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/estrategia.html">
+                            Pensamiento estratégico
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li class="menu-desplegable">
+                <a href="index.html#programas">Programas</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="clases.html">
+                            Clases
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cursos.html">
+                            Cursos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="eventos.html">
+                            Eventos
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        
+    </div></header>
+
+
+    <main>
+
+    <!-- INTRODUCCIÓN -->
+
+    <section id="inicio-cursos">
+
+        <div class="contenedor">
+
+            <p class="seccion-etiqueta">
+                Programas intensivos
+            </p>
+
+            <h1>Cursos</h1>
+
+            <p class="cursos-intro">
+                Programas de duración limitada para profundizar en un área,
+                prepararse para nuevos retos o desarrollar proyectos
+                matemáticos específicos.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CURSOS DISPONIBLES -->
+
+    <section id="cursos-disponibles">
+
+        <div class="contenedor">
+
+            <div class="cursos-encabezado">
+
+                <p class="seccion-etiqueta">
+                    Nuestra oferta
+                </p>
+
+                <h2>Cursos especiales</h2>
+
+            </div>
+
+
+            <div class="cursos-grid">
+
+
+                <!-- MATEMÁTICAS AVANZADAS -->
+
+                <article class="curso-card">
+
+                    <div class="icono-curso icono-turquesa">
+                        <span>∫</span>
+                    </div>
+
+                    <div class="curso-meta">
+                        Curso de verano · 4 semanas
+                    </div>
+
+                    <h3>Matemáticas avanzadas</h3>
+
+                    <p>
+                        Curso de verano de 4 semanas en el que se ven temas
+                        de matemáticas de universidad con diversas aplicaciones,
+                        como cálculo, álgebra lineal y teoría de grafos,
+                        todo con un enfoque matemático.
+                    </p>
+
+                    <a href="materias/avanzadas.html"
+                       class="enlace-curso">
+
+                        Conocer Matemáticas Avanzadas
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- MATEMÁTICAS BÁSICAS -->
+
+                <article class="curso-card">
+
+                    <div class="icono-curso icono-azul">
+                        <i class="bi bi-pencil"></i>
+                    </div>
+
+                    <div class="curso-meta">
+                        Curso de verano · 3 semanas
+                    </div>
+
+                    <h3>Matemáticas básicas</h3>
+
+                    <p>
+                        Curso de verano de 3 semanas de duración,
+                        para regularizarse con el temario escolar
+                        o prepararse para el siguiente año.
+                    </p>
+
+                    <a href="materias/basicas.html"
+                       class="enlace-curso">
+
+                        Conocer Matemáticas Básicas
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- OLIMPIADA PARA PROFESORES -->
+
+                <article class="curso-card">
+
+                    <div class="icono-curso icono-rojo">
+                        <i class="bi bi-award"></i>
+                    </div>
+
+                    <div class="curso-meta">
+                        Para profesores
+                    </div>
+
+                    <h3>Matemáticas de olimpiada para profesores</h3>
+
+                    <p>
+                        ¿Quieres comenzar un club de matemáticas en tu escuela
+                        para preparar a tus alumnos para las olimpiadas?
+                    </p>
+
+                    <p>
+                        En este curso aprenderás los temas básicos de matemáticas
+                        de olimpiada y cómo trabajar con ellos dentro de un
+                        club escolar.
+                    </p>
+
+                    <a href="materias/olimpicas.html"
+                       class="enlace-curso">
+
+                        Conocer Matemáticas Olímpicas
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- CLUB ESCOLAR -->
+
+                <article class="curso-card">
+
+                    <div class="icono-curso icono-azul">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <div class="curso-meta">
+                        Para instituciones educativas
+                    </div>
+
+                    <h3>Club de matemáticas escolar</h3>
+
+                    <p>
+                        Un entrenador de nuestro equipo va a tu institución
+                        a arrancar el club de matemáticas, entrenar a tu propio
+                        equipo y, al mismo tiempo, capacitar a tu instructor
+                        para que posteriormente pueda quedar a cargo del grupo.
+                    </p>
+
+                    <p>
+                        Está pensado principalmente para Matemáticas Olímpicas,
+                        aunque bajo petición puede desarrollarse alrededor
+                        de otra rama o tema matemático específico.
+                    </p>
+
+                    <a href="materias/olimpicas.html"
+                       class="enlace-curso">
+
+                        Conocer Matemáticas Olímpicas
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="contacto-clases">
+
+    <div class="contenedor">
+
+        <h2>¿Quieres preguntar sobre nuestros cursos?</h2>
+
+
+        <a class="whatsapp-principal"
+           data-red="whatsapp"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <i class="bi bi-whatsapp"></i>
+            <span>Escríbenos por WhatsApp</span>
+
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+    <footer>
+
+    <div class="contenedor footer-contenido">
+
+        <!-- IDENTIDAD -->
+        <div class="footer-identidad">
+
+            <p class="footer-nombre">
+                Academia de Matemáticas Avanzadas Euler
+            </p>
+
+            <p>
+                Cuernavaca, Morelos
+            </p>
+
+            <p class="footer-descripcion">
+                Matemáticas desde la comprensión,
+                el razonamiento y la creatividad.
+            </p>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-navegacion">
+
+            <h3>Explora Euler</h3>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="quienes somos.html">Quiénes somos</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#areas">Materias</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#programas">Programas</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <!-- REDES -->
+        <div class="footer-redes">
+
+            <h3>Síguenos</h3>
+
+            <div class="footer-iconos">
+
+                <a data-red="facebook"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a data-red="instagram"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a data-red="tiktok"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <a data-red="youtube"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="bi bi-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR -->
+    <div class="contenedor footer-inferior">
+
+        <p>
+        Academia de Matemáticas Avanzadas Euler
+        </p>
+
+    </div>
+
+    </footer>
+
+    <script src="js/euler.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

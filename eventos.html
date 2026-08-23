@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academia de Matemáticas Avanzadas Euler</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body data-root="">
+
+    <header><div class="contenedor">
+        
+            <div>
+                <a href="index.html">
+                    <img class="logo"
+         src="images/logo-euler.png"
+         alt="Logo de la Academia de Matemáticas Avanzadas Euler">
+                </a>
+            </div>
+
+            <!-- BUSCADOR -->
+                <div class="buscador">
+
+    <div class="buscador-campo">
+
+        <input
+            type="search"
+            id="campo-busqueda"
+            placeholder="Buscar..."
+            autocomplete="off"
+            aria-label="Buscar en Academia Euler"
+        >
+
+        <button
+            type="button"
+            id="boton-busqueda"
+            aria-label="Buscar"
+        >
+            <i class="bi bi-search"></i>
+        </button>
+
+    </div>
+
+    <div
+        id="resultados-busqueda"
+        class="resultados-busqueda">
+    </div>
+
+                </div>
+
+                <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+            <i class="bi bi-list"></i>
+        </button>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="quienes somos.html">¿Quiénes somos?</a></li>
+                    <li class="menu-desplegable">
+                <a href="index.html#areas">Materias</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="materias/basicas.html">
+                            Matemáticas básicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/olimpicas.html">
+                            Matemáticas olímpicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/avanzadas.html">
+                            Matemáticas avanzadas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/admision.html">
+                            Preparación para exámenes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="materias/estrategia.html">
+                            Pensamiento estratégico
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li class="menu-desplegable">
+                <a href="index.html#programas">Programas</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="clases.html">
+                            Clases
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cursos.html">
+                            Cursos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="eventos.html">
+                            Eventos
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        
+    </div></header>
+
+
+    <main>
+
+    <!-- INTRODUCCIÓN -->
+
+    <section id="inicio-eventos">
+
+        <div class="contenedor">
+
+            <p class="seccion-etiqueta">
+                Actividades especiales
+            </p>
+
+            <h1>Eventos</h1>
+
+            <p class="eventos-intro">
+                Actividades de convivencia, talleres, pláticas y experiencias
+                para aprender matemáticas y pensamiento estratégico
+                de una forma distinta.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPOS DE EVENTOS -->
+
+    <section id="tipos-eventos">
+
+        <div class="contenedor">
+
+            <div class="eventos-encabezado">
+
+                <p class="seccion-etiqueta">
+                    Qué hacemos
+                </p>
+
+                <h2>Actividades y eventos</h2>
+
+            </div>
+
+
+            <div class="eventos-grid">
+
+                <!-- DÍAS DE JUEGOS -->
+
+                <article class="evento-card">
+
+                    <div class="icono-evento icono-rojo">
+                        <i class="bi bi-dice-5"></i>
+                    </div>
+
+                    <h3>Días de juegos</h3>
+
+                    <p>
+                        Eventos de convivencia con juegos de estrategia,
+                        duelos olímpicos, acertijos de misterio, premios
+                        y mucho más.
+                    </p>
+
+                </article>
+
+
+                <!-- TALLERES Y PLÁTICAS -->
+
+                <article class="evento-card">
+
+                    <div class="icono-evento icono-turquesa">
+                        <i class="bi bi-easel"></i>
+                    </div>
+
+                    <h3>Talleres y pláticas</h3>
+
+                    <p>
+                        Ven a nuestros talleres y pláticas de diversos temas de
+                        <a href="materias/estrategia.html">
+                            pensamiento estratégico
+                        </a>
+                        y
+                        <a href="materias/avanzadas.html">
+                            matemáticas avanzadas
+                        </a>.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CALENDARIO -->
+
+    <section id="calendario">
+
+        <div class="contenedor">
+
+            <div class="calendario-encabezado">
+
+                <p class="seccion-etiqueta">
+                    Próximamente
+                </p>
+
+                <h2>Calendario de actividades</h2>
+
+                <p>
+                    Consulta nuestros próximos cursos, talleres, pláticas
+                    y actividades especiales.
+                </p>
+
+            </div>
+
+            <div class="calendario-contenedor">
+
+                <iframe
+                    class="calendario-google"
+                    src="https://calendar.google.com/calendar/embed?src=academiadematematicas.euler%40gmail.com&ctz=America%2FMexico_City"
+                    frameborder="0"
+                    scrolling="no">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+    <footer>
+
+    <div class="contenedor footer-contenido">
+
+        <!-- IDENTIDAD -->
+        <div class="footer-identidad">
+
+            <p class="footer-nombre">
+                Academia de Matemáticas Avanzadas Euler
+            </p>
+
+            <p>
+                Cuernavaca, Morelos
+            </p>
+
+            <p class="footer-descripcion">
+                Matemáticas desde la comprensión,
+                el razonamiento y la creatividad.
+            </p>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-navegacion">
+
+            <h3>Explora Euler</h3>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="index.html#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="quienes somos.html">Quiénes somos</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#areas">Materias</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#programas">Programas</a>
+                    </li>
+
+                    <li>
+                        <a href="index.html#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <!-- REDES -->
+        <div class="footer-redes">
+
+            <h3>Síguenos</h3>
+
+            <div class="footer-iconos">
+
+                <a data-red="facebook"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a data-red="instagram"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a data-red="tiktok"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <a data-red="youtube"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="bi bi-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR -->
+    <div class="contenedor footer-inferior">
+
+        <p>
+        Academia de Matemáticas Avanzadas Euler
+        </p>
+
+    </div>
+
+    </footer>
+
+    <script src="js/euler.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

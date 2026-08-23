@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academia de Matemáticas Avanzadas Euler</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body data-root="../">
+
+    <header>
+        <div class="contenedor">
+        
+            <div>
+                <a href="../index.html">
+                    <img class="logo"
+         src="../images/logo-euler.png"
+         alt="Logo de la Academia de Matemáticas Avanzadas Euler">
+                </a>
+            </div>
+
+            <!-- BUSCADOR -->
+                <div class="buscador">
+
+    <div class="buscador-campo">
+
+        <input
+            type="search"
+            id="campo-busqueda"
+            placeholder="Buscar..."
+            autocomplete="off"
+            aria-label="Buscar en Academia Euler"
+        >
+
+        <button
+            type="button"
+            id="boton-busqueda"
+            aria-label="Buscar"
+        >
+            <i class="bi bi-search"></i>
+        </button>
+
+    </div>
+
+    <div
+        id="resultados-busqueda"
+        class="resultados-busqueda">
+    </div>
+
+                </div>
+
+                <button
+            class="menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+        >
+            <i class="bi bi-list"></i>
+        </button>
+
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../quienes somos.html">¿Quiénes somos?</a></li>
+                    <li class="menu-desplegable">
+                <a href="../index.html#areas">Materias</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="../materias/basicas.html">
+                            Matemáticas básicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../materias/olimpicas.html">
+                            Matemáticas olímpicas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../materias/avanzadas.html">
+                            Matemáticas avanzadas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../materias/admision.html">
+                            Preparación para exámenes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../materias/estrategia.html">
+                            Pensamiento estratégico
+                        </a>
+                    </li>
+                </ul>
+            </li>
+                    
+                    <li class="menu-desplegable">
+                <a href="../index.html#programas">Programas</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="../clases.html">
+                            Clases
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../cursos.html">
+                            Cursos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../eventos.html">
+                            Eventos
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+                    <li><a href="../index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        
+    </div>
+</header>
+
+    <main>
+
+    <!-- INTRODUCCIÓN -->
+
+    <section id="inicio-materia">
+
+        <div class="contenedor">
+
+            <p class="seccion-etiqueta">
+                Área de estudio
+            </p>
+
+            <h1>Matemáticas avanzadas</h1>
+
+            <p class="materia-intro">
+                Éste es el verdadero mundo de las matemáticas.
+            </p>
+
+            <p class="materia-intro-secundaria">
+                Aprende temas avanzados como lógica matemática, álgebra moderna
+                y lineal, cálculo y otras áreas, con un punto de vista formal
+                y aplicable a distintas ramas de la ciencia y la tecnología.
+            </p>
+
+            <p class="materia-intro-secundaria">
+                Ideal para quienes estudian o quieren estudiar alguna ingeniería
+                o carrera de ciencias o informática, pero tienen interés en una profundidad
+                matemática mayor a la que normalmente ofrecen estas carreras.
+            </p>
+
+        </div>
+
+    </section>
+
+<section class="seccion-areas">
+
+    <div class="contenedor">
+
+        <p class="seccion-etiqueta">
+            Lo que trabajamos
+        </p>
+
+        <h2>Áreas</h2>
+
+        <p class="areas-intro">
+            Cada sesión trabajará una o más de las áreas siguientes:
+        </p>
+
+        <div class="areas-grid">
+
+    <!-- LÓGICA Y CONJUNTOS -->
+
+    <article class="area-card">
+
+        <div class="icono-area icono-azul">
+            <span>∀</span>
+        </div>
+
+        <h3>Lógica y conjuntos</h3>
+
+        <div class="area-ejemplos">
+
+            <p>
+                ¿Qué es realmente el número 5?
+            </p>
+
+            <p>
+                ¿Cómo sabemos que 2 + 2 realmente es igual a 4?
+            </p>
+
+            <p>
+                ¿Cómo sabemos si una demostración está bien o mal?
+            </p>
+
+        </div>
+
+        <div class="area-descripcion">
+
+            <p>
+                Esta es la estructura fundamental del mundo matemático,
+                y tiene aplicaciones en la informática, las bases de datos
+                y la inteligencia artificial, entre otras.
+            </p>
+
+            <p>
+                Desde axiomas, órdenes y funciones hasta operadores topológicos
+                y conexiones de Galois.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- ÁLGEBRA UNIVERSAL -->
+
+    <article class="area-card">
+
+        <div class="icono-area icono-rojo">
+            <i class="bi bi-diagram-3"></i>
+        </div>
+
+        <h3>Álgebra universal</h3>
+
+        <div class="area-ejemplos">
+
+            <p>
+                ¿Qué tienen en común los tipos de sangre, los vértices
+                de un cubo y los divisores del número 30?
+            </p>
+
+            <p>
+                ¿Qué tienen en común las rotaciones de un objeto,
+                los vértices de un cubo y los puntos en un espacio
+                de n dimensiones?
+            </p>
+
+        </div>
+
+        <div class="area-descripcion">
+
+            <p>
+                El álgebra estudia las estructuras matemáticas según sus
+                operaciones, y es un campo sumamente amplio con aplicaciones
+                en la informática, la física, la criptografía y la ingeniería,
+                entre otras.
+            </p>
+
+            <p>
+                Desde teoría de grupos y retículas hasta álgebra lineal,
+                topología y álgebra booleana.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- CÁLCULO -->
+
+    <article class="area-card">
+
+        <div class="icono-area icono-turquesa">
+            <span>∫</span>
+        </div>
+
+        <h3>Cálculo</h3>
+
+        <div class="area-ejemplos">
+
+            <p>
+                ¿Qué es realmente una derivada y para qué sirve?
+            </p>
+
+            <p>
+                ¿Cómo es eso de las epsilons y las deltas?
+            </p>
+
+        </div>
+
+        <div class="area-descripcion">
+
+            <p>
+                El cálculo diferencial e integral es el estudio del cambio
+                y la transformación, y tiene aplicaciones en la ciencia,
+                la ingeniería, la economía, la informática y la medicina,
+                entre otras.
+            </p>
+
+            <p>
+                Desde las definiciones formales de límites hasta las propiedades
+                de las derivadas e integrales, todo con rigor matemático,
+                respondiendo los porqués y realizando las demostraciones
+                en cada paso.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- TEORÍA DE GRÁFICAS -->
+
+    <article class="area-card">
+
+        <div class="icono-area icono-azul">
+            <i class="bi bi-share"></i>
+        </div>
+
+        <h3>Teoría de gráficas</h3>
+
+        <div class="area-ejemplos">
+
+            <p>
+                Si un repartidor tiene que pasar por todo el barrio,
+                ¿cómo encuentra la mejor manera de hacerlo?
+            </p>
+
+            <p>
+                Si hay gente en tu fiesta que se lleva mal con otra,
+                ¿cómo los sientas en la mesa sin que haya problemas?
+            </p>
+
+        </div>
+
+        <div class="area-descripcion">
+
+            <p>
+                La teoría de gráficas estudia redes y estructuras de relaciones
+                entre una colección de objetos, y tiene aplicaciones en
+                informática, transporte y logística, redes sociales y
+                telecomunicaciones, entre otras.
+            </p>
+
+            <p>
+                Desde las definiciones básicas de vértices y aristas hasta
+                diversas técnicas y algoritmos de optimización.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+    </div>
+
+</section>
+
+
+
+    
+
+    <!-- MODALIDADES -->
+
+    <section id="donde-estudiar">
+
+        <div class="contenedor">
+
+            <div class="materia-seccion-encabezado">
+
+                <p class="seccion-etiqueta">
+                    Elige tu modalidad
+                </p>
+
+                <h2>¿Dónde puedes estudiar Matemáticas Avanzadas?</h2>
+
+            </div>
+
+
+            <div class="modalidades-materia">
+
+                <!-- CLASES SEMANALES -->
+
+                <article class="modalidad-materia">
+
+                    <div class="icono-modalidad icono-azul">
+                        <i class="bi bi-calendar-week"></i>
+                    </div>
+
+                    <h3>Clases semanales</h3>
+
+                    <p>
+                        Disponibles en nuestras sedes de Chamilpa
+                        y Los Volcanes.
+                    </p>
+
+                    <a href="../clases.html#horarios"
+                       class="enlace-modalidad">
+
+                        Ver horarios de clases
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- ACOMPAÑAMIENTOS -->
+
+                <article class="modalidad-materia">
+
+                    <div class="icono-modalidad icono-turquesa">
+                        <i class="bi bi-person-gear"></i>
+                    </div>
+
+                    <h3>Clases particulares y acompañamientos</h3>
+
+                    <p>
+                        Aprende de manera totalmente personalizada en el horario
+                        de tu conveniencia, con un asesor personal y supervisión
+                        de nuestro sistema.
+                    </p>
+
+                    <ul class="lista-modalidad">
+
+                        <li>A domicilio</li>
+                        <li>En línea</li>
+
+                        <li>
+                            <a href="https://maps.app.goo.gl/vLEvbEbYsc43wZUS6"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Sede Chamilpa
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://maps.app.goo.gl/sBRq6tqLc8bDBSTM8"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Sede Los Volcanes
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <a href="../clases.html#acompañamientos"
+                       class="enlace-modalidad">
+
+                        Conoce nuestros acompañamientos
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- CURSOS -->
+
+                <article class="modalidad-materia">
+
+                    <div class="icono-modalidad icono-rojo">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+
+                    <h3>Cursos especiales</h3>
+
+                    <p>
+                        Conoce nuestro curso de verano de 4 semanas,
+                        enfocado en darte una visión general pero profunda
+                        de las herramientas básicas del mundo matemático profesional.
+                    </p>
+
+                    <a href="../cursos.html"
+                       class="enlace-modalidad">
+
+                        Ver cursos especiales
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+
+                <!-- EVENTOS -->
+
+                <article class="modalidad-materia">
+
+                    <div class="icono-modalidad icono-azul">
+                        <i class="bi bi-easel"></i>
+                    </div>
+
+                    <h3>Talleres y eventos</h3>
+
+                    <p>
+                        Conoce nuestros talleres y pláticas
+                        de Matemáticas Avanzadas.
+                    </p>
+
+                    <a href="../eventos.html"
+                       class="enlace-modalidad">
+
+                        Ver próximos eventos
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <!-- CONTACTO -->
+
+            <div class="materia-cta">
+
+                <p>
+                    ¿Quieres saber cuál modalidad de Matemáticas Avanzadas
+                    es la adecuada para ti?
+                </p>
+
+                <a href="../index.html#contacto"
+                   class="boton boton-principal">
+
+                    Pide informes de Matemáticas Avanzadas
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+    <footer>
+
+    <div class="contenedor footer-contenido">
+
+        <!-- IDENTIDAD -->
+        <div class="footer-identidad">
+
+            <p class="footer-nombre">
+                Academia de Matemáticas Avanzadas Euler
+            </p>
+
+            <p>
+                Cuernavaca, Morelos
+            </p>
+
+            <p class="footer-descripcion">
+                Matemáticas desde la comprensión,
+                el razonamiento y la creatividad.
+            </p>
+
+        </div>
+
+
+        <!-- NAVEGACIÓN -->
+        <div class="footer-navegacion">
+
+            <h3>Explora Euler</h3>
+
+            <nav>
+                <ul>
+
+                    <li>
+                        <a href="../index.html#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="../quienes somos.html">Quiénes somos</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#areas">Materias</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#programas">Programas</a>
+                    </li>
+
+                    <li>
+                        <a href="../index.html#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+        </div>
+
+
+        <!-- REDES -->
+        <div class="footer-redes">
+
+            <h3>Síguenos</h3>
+
+            <div class="footer-iconos">
+
+                <a data-red="facebook"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <a data-red="instagram"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+
+                <a data-red="tiktok"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+
+                <a data-red="youtube"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+                    <i class="bi bi-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PARTE INFERIOR -->
+    <div class="contenedor footer-inferior">
+
+        <p>
+        Academia de Matemáticas Avanzadas Euler
+        </p>
+
+    </div>
+
+    </footer>
+
+    <script src="../js/euler.js"></script>
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>
